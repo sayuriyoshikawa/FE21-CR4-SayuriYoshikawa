@@ -17,16 +17,17 @@ header h1 {
 
 .contain {
     margin: 2vw;
-    padding:2vw;
+    padding: 2vw;
 }
 
 
-.card{
-
+.card ,.card1{
+    
     transition: width 1s, height 1s, transform 0.5s;
 }
 
-.card:hover {
+
+.card:hover, .card1:hover {
     transform: matrix(1.05, 0, 0, 1.05, 0, 0)
 }
 

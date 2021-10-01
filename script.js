@@ -54,7 +54,7 @@ for (var x of movie) {
         <p class="card-text text-muted">${x.genre}</p>
         <p class="card-text">${x.description}</p>
 
-        <div style="display:flex; justify-content: flex-end; position: absolute; right:1vw; bottom: 1vw;">
+        <div style="display:flex; justify-content: flex-end; position: absolute; right:1px; bottom: 1px;">
         <button type="button" class="btn likebtn" id="like">
         <span style="color:rgb(95, 223, 86);">Like</span><img src="img/like1.png" alt="like"></button>
         <span class="likenumber" style="background-color:rgb(95, 223, 86); display: inline-block; width:50px; height:50px; border-radius: 50%; text-align:center; line-height:50px; color:black; font-size:20px;" >${x.likes}</span>
@@ -149,9 +149,8 @@ number[5].addEventListener("click", function () {
 // }
 
 
-//数字を取得、大きい順に並べる、クリックボタン
 
-
+//Sort 
 function changeoder() {
 
     let newoder = movie;
@@ -173,10 +172,10 @@ function changeoder() {
     for (var y of newoder) {
 
         card1 += `
-<div class="card row col-lg-4 col-md-6 col-sm-12 px-0" style="max-width: 540px; background-color: black; color: white; position: relative;">
+<div class="card row col-lg-4 col-md-6 col-sm-12 px-0" style="max-width:540px; background-color: black; color: white; position: relative;">
   <div class="row g-0">
-    <div class="col-4" >
-      <img src="${y.image}" class="img-fluid rounded-start" alt="picture">
+    <div class="col-4" > 
+      <img src="${y.image}" class="img-fluid rounded-start " alt="picture">
     </div>
     <div class="col-8">
       <div class="card-body">
@@ -204,7 +203,7 @@ function changeoder() {
     document.getElementById("main").innerHTML = card1;
 
 
-//like button
+    //like button
     var count0 = newoder[0].likes;
     number[0].addEventListener("click", function () {
 
@@ -213,47 +212,47 @@ function changeoder() {
 
     })
     var count1 = newoder[1].likes;
-number[1].addEventListener("click", function () {
+    number[1].addEventListener("click", function () {
 
-    count1 += 1;
-    a[1].innerHTML = count1;
+        count1 += 1;
+        a[1].innerHTML = count1;
 
-})
+    })
 
-var count2 = newoder[2].likes;
-number[2].addEventListener("click", function () {
+    var count2 = newoder[2].likes;
+    number[2].addEventListener("click", function () {
 
-    count2 += 1;
-    a[2
-    ].innerHTML = count2;
-
-
-})
-
-var count3 = newoder[3].likes;
-number[3].addEventListener("click", function () {
-
-    count3 += 1;
-    a[3].innerHTML = count3;
+        count2 += 1;
+        a[2
+        ].innerHTML = count2;
 
 
-})
-var count4 = newoder[4].likes;
-number[4].addEventListener("click", function () {
+    })
 
-    count4 += 1;
-    a[4].innerHTML = count4;
+    var count3 = newoder[3].likes;
+    number[3].addEventListener("click", function () {
 
-
-})
-var count5 = newoder[5].likes;
-number[5].addEventListener("click", function () {
-
-    count5 += 1;
-    a[5].innerHTML = count5;
+        count3 += 1;
+        a[3].innerHTML = count3;
 
 
-})
+    })
+    var count4 = newoder[4].likes;
+    number[4].addEventListener("click", function () {
+
+        count4 += 1;
+        a[4].innerHTML = count4;
+
+
+    })
+    var count5 = newoder[5].likes;
+    number[5].addEventListener("click", function () {
+
+        count5 += 1;
+        a[5].innerHTML = count5;
+
+
+    })
 
 }
 
